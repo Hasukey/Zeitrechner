@@ -43,12 +43,10 @@ let hrs = document.getElementById("hrs");
 
             // Handle negative values (overflow)
             if (remainingSecond === 60) {
-                remainingSecond = 0;
-                remainingMinute--;
+                remainingSecond = 60;
             }
             if (remainingMinute < 0) {
                 remainingMinute += 60;
-                remainingHour--;
             }
             if (remainingHour < 0) {
                 remainingHour += 24;
@@ -80,4 +78,4 @@ let hrs = document.getElementById("hrs");
                 secs.innerHTML = remainingSecond.toString().padStart(2, "0");
             }
         }
-    }, 1000);
+    }, 500);
