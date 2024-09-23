@@ -42,8 +42,8 @@ let hrs = document.getElementById("hrs");
             let remainingSecond = 60 - currentSecond;
 
             // Handle negative values (overflow)
-            if (remainingSecond === 60) {
-                remainingSecond = 60;
+            if (currentSecond === 60) {
+                remainingSecond = 59;
             }
             if (remainingMinute < 0) {
                 remainingMinute += 60;
@@ -59,9 +59,9 @@ let hrs = document.getElementById("hrs");
                 let overtimeSecond = currentSecond;
 
                 // Handle overtime minute and second overflow
-                if (overtimeMinute < 0) {
-                    overtimeMinute += 60;
-                    overtimeHour--;
+
+                if (overtimeMinute < 0){
+                    overtimeMinute += 60
                 }
 
                 // Display overtime label and the time
