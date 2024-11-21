@@ -1,4 +1,4 @@
-let hrs = document.getElementById("hrs");
+    let hrs = document.getElementById("hrs");
     let mins = document.getElementById("mins");
     let secs = document.getElementById("secs");
     let overtimeLabel = document.getElementById("overtimeLabel");
@@ -30,7 +30,6 @@ let hrs = document.getElementById("hrs");
         if (arr_time.value) {  // Ensure that time input has a value
             let [arr_hour, arr_minutes] = arr_time.value.split(":").map(Number);  // Split the time into hours and minutes
             let { end_hour, end_minutes } = calculateEndTime(arr_hour, arr_minutes);
-
             // Get the current hours, minutes, and seconds
             let currentHour = currentTime.getHours();
             let currentMinute = currentTime.getMinutes();
@@ -43,7 +42,7 @@ let hrs = document.getElementById("hrs");
 
             // Handle negative values (overflow)
             if (currentSecond === 60) {
-                remainingSecond = 59;
+                remainingSecond = 60;
             }
             if (remainingMinute < 0) {
                 remainingMinute += 60;
